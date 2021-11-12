@@ -9,8 +9,10 @@ set nu
 
 set colorcolumn=80
 
-" Terminal buffer
+" Terminal Emulator
 nmap tt :bel sp 100 \| resize 20 \| term<cr><S-A>
+:tnoremap <Esc> <C-\><C-n>
+:tnoremap <Esc><Esc> <C-\><C-n>:q<cr>
 
 " cscope
 set csprg=/usr/bin/cscope
