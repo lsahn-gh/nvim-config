@@ -1,1 +1,3 @@
 my nvim config repo
+
+git clone https://github.com/memnoth/nvim-config ~/.config/nvim
