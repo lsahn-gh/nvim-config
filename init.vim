@@ -3,7 +3,7 @@ source ~/.config/nvim/plugins.vim
 
 colorscheme vim-monokai-tasty
 
-set noet
+set et
 set shiftwidth=4
 set nu
 
