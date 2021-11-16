@@ -7,6 +7,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'yegappan/mru'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 call plug#end()
 
@@ -17,23 +18,26 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
+map <silent><leader>nn :NERDTreeToggle<cr>
+map <silent><leader>nb :NERDTreeFromBookmark<Space>
+map <silent><leader>nf :NERDTreeFind<cr>
 
 " bufExplorer
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
+map <silent><leader>o :BufExplorer<cr>
 
 " MRU
 let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
+map <silent><leader>f :MRU<CR>
 
 " TagList
-map <F8> :TlistToggle<CR>
+map <silent><F8> :TlistToggle<CR>
 
 " Git-Messenger
-nmap <Leader>gm <Plug>(git-messenger)
+nmap <silent><Leader>gm <Plug>(git-messenger)
+
+" CoC
+source ~/.config/nvim/coc-settings.vim
