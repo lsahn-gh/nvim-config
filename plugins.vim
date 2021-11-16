@@ -37,6 +37,15 @@ map <silent><leader>f :MRU<CR>
 map <silent><F8> :TlistToggle<CR>
 
 " Git-Messenger
+function! s:setup_git_messenger_popup() abort
+    " Your favorite configuration here
+
+    " For example, set go back/forward history to <C-o>/<C-i>
+    nmap <buffer><C-o> o
+    nmap <buffer><C-i> O
+endfunction
+autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
+let g:git_messenger_always_into_popup = v:true
 nmap <silent><Leader>gm <Plug>(git-messenger)
 
 " CoC
