@@ -9,10 +9,8 @@ set nu
 
 set colorcolumn=80
 
-" Terminal Emulator
-nmap tt :bel sp 100 \| resize 20 \| term<cr><S-A>
-:tnoremap <Esc> <C-\><C-n>
-:tnoremap <Esc><Esc> <C-\><C-n>:q<cr>
+" Keymaps
+source ~/.config/nvim/keymaps.vim
 
 " cscope
 set csprg=/usr/bin/cscope
