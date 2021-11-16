@@ -8,6 +8,7 @@ set shiftwidth=4
 set nu
 
 set colorcolumn=80
+set cursorline
 
 " Keymaps
 source ~/.config/nvim/keymaps.vim
