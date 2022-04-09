@@ -8,6 +8,7 @@ Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'yegappan/mru'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'embear/vim-localvimrc'
 
 call plug#end()
 
