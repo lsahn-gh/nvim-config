@@ -7,7 +7,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'yegappan/mru'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'embear/vim-localvimrc'
 
 call plug#end()
@@ -50,4 +50,4 @@ let g:git_messenger_always_into_popup = v:true
 nmap <silent><Leader>gm <Plug>(git-messenger)
 
 " CoC
-source ~/.config/nvim/coc-settings.vim
+"source ~/.config/nvim/coc-settings.vim
