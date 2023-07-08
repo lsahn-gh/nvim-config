@@ -35,7 +35,7 @@ let MRU_Max_Entries = 400
 map <silent><leader>f :MRU<CR>
 
 " TagList
-map <silent><F8> :TlistToggle<CR>
+map <silent><leader>mm :TlistToggle<CR>
 
 " Git-Messenger
 function! s:setup_git_messenger_popup() abort
