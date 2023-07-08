@@ -10,6 +10,8 @@ set nu
 set colorcolumn=80
 set cursorline
 
+set list listchars=eol:↓,tab:\ \ ┊,trail:●,extends:…,precedes:…,space:·
+
 " Keymaps
 source ~/.config/nvim/keymaps.vim
 
@@ -20,7 +22,7 @@ set csto=0 "(숫자 0)
 set cst
 set nocsverb
 
-if filereadable("./cscope.out")                              
+if filereadable("./cscope.out")
     cs add cscope.out
 else
     cs add /usr/src/linux/cscope.out
