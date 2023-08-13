@@ -10,7 +10,7 @@ set nu
 set colorcolumn=80
 set cursorline
 
-set list listchars=eol:↓,tab:\ \ ┊,trail:●,extends:…,precedes:…,space:·
+set list listchars=tab:\ \ ┊,trail:●,extends:…,precedes:…
 
 " Keymaps
 source ~/.config/nvim/keymaps.vim
