@@ -1,6 +1,7 @@
 " Custom Keymaps
 
 nmap <silent><leader>qa :qa<cr>
+nmap <silent><leader>xa :xa<cr>
 
 " term emulator
 nmap <silent>tt :bel sp 100 \| resize 15 \| term<cr><S-A>
