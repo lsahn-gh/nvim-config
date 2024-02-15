@@ -1,7 +1,8 @@
 source ~/.config/nvim/basic.vim
 source ~/.config/nvim/plugins.vim
 
-colorscheme vim-monokai-tasty
+" colorscheme vim-monokai-tasty
+colorscheme monokai
 
 set et
 set shiftwidth=4

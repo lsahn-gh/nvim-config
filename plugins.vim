@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'patstockwell/vim-monokai-tasty'
+Plug 'ku1ik/vim-monokai'
+Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'rhysd/git-messenger.vim'
 Plug 'mhinz/vim-signify'
 Plug 'jlanzarotta/bufexplorer'
