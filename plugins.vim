@@ -1,6 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
-"Plug 'patstockwell/vim-monokai-tasty'
 Plug 'ku1ik/vim-monokai'
 Plug 'inkarkat/vim-ReplaceWithRegister'
 Plug 'rhysd/git-messenger.vim'
@@ -8,14 +6,10 @@ Plug 'mhinz/vim-signify'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/taglist.vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'yegappan/mru'
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-Plug 'lsahn-gh/cscope-maps'
 Plug 'embear/vim-localvimrc'
-
+Plug 'dhananjaylatkar/cscope_maps.nvim'
+Plug 'ibhagwan/fzf-lua'
 call plug#end()
-
-" Keymaps
 
 " NERDTree
 let g:NERDTreeWinPos = "right"
@@ -33,10 +27,6 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <silent><leader>o :BufExplorer<cr>
 
-" MRU
-let MRU_Max_Entries = 400
-map <silent><leader>f :MRU<CR>
-
 " TagList
 map <silent><leader>mm :TlistToggle<CR>
 
@@ -52,5 +42,20 @@ autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
 let g:git_messenger_always_into_popup = v:true
 nmap <silent><Leader>gm <Plug>(git-messenger)
 
-" CoC
-"source ~/.config/nvim/coc-settings.vim
+
+" lua plugins, modify carefully
+lua << EOF
+-- fzf-lua
+require("fzf-lua")
+
+-- cscope_maps
+local defaults = {
+    skip_input_prompt = true,
+    cscope = {
+        picker = "fzf-lua",
+        qf_window_size = 3,
+        skip_picker_for_single_result = true,
+    }}
+require("cscope_maps").setup(defaults)
+EOF
+
