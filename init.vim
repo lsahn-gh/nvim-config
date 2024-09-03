@@ -13,6 +13,10 @@ set cursorline
 
 set list listchars=tab:\ \ ┊,trail:●,extends:…,precedes:…
 
+if filereadable(".vimrc_local")
+    so .vimrc_local
+endif
+
 " Keymaps
 source ~/.config/nvim/keymaps.vim
 
