@@ -4,6 +4,7 @@ Lightweight Neovim configs for Kernel Development
 - Neovim v0.10.1 (for supporting Lua APIs)
 - Vim Plugin Manager (https://github.com/junegunn/vim-plug)
 - fzf (for fzf-lua)
+- cscope (for indexing kernel symbols)
 
 Install
 -------
