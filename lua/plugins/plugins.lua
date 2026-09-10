@@ -84,13 +84,21 @@ require("lazy").setup({
     { "ibhagwan/fzf-lua",
         cmd = "FzfLua",
         keys = {
-            { "<leader>fzf", ":FzfLua<CR>", mode = "n", silent = true, desc = "Open FzfLua dialog" },
-            { "<leader>fdg", ":FzfLua grep_cword<CR>", mode = "n", silent = true, desc = "Grep current word" },
-            { "<leader>fdf", ":FzfLua files<CR>", mode = "n", silent = true, desc = "Open files dialog" }
+            { "<leader>fzf",    ":FzfLua<CR>", mode = "n", silent = true, desc = "Open FzfLua dialog" },
+            { "<leader>fdf",    ":FzfLua files<CR>", mode = "n", silent = true, desc = "Open files dialog" },
+            { "<leader>fdg",    ":FzfLua grep_cword<CR>", mode = "n", silent = true, desc = "Grep current word" },
+            { "<leader>fdrg",   ":FzfLua live_grep<CR>", mode = "n", silent = true, desc = "" },
         },
-        config = function()
-            require("fzf-lua").setup({})
-        end,
+        ---@module "fzf-lua"
+        ---@type fzf-lua.Config|{}
+        ---@diagnostic disable: missing-fields
+        opts = {
+        },
+        grep = {
+            rg_glob     = true,
+            glob_flag   = "--iglob"     -- case sensitive
+        },
+        ---@diagnostic enable: missing-fields
     },
 
     -- Easy Align
